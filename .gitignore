@@ -1,0 +1,12 @@
+# Local runtime output
+*.log
+Logs/
+
+# Editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Local packaging
+*.zip

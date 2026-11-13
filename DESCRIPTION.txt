@@ -1,0 +1,1 @@
+GPU Refresher is a Windows terminal utility that helps release stale NVIDIA GPU contexts after undocking on hybrid Intel + NVIDIA laptops.

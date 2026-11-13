@@ -1,0 +1,23 @@
+name: Windows checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run isolated workflow checks
+        run: ./tests/Test-GpuRefresher.ps1
+      - name: Preview simulated hardware
+        run: ./GPU-Refresher.ps1 -Action Preview -Demo -NonInteractive
